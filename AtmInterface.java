@@ -90,8 +90,6 @@ public class AtmInterface {
 
                // Initialize BankAccount with initial balance
         int initialBalance = 98533552;
-        System.out.print("Your initial account balance: " + initialBalance);
-        System.out.println();
         
         BankAccount bankAccount = new BankAccount(initialBalance);
 

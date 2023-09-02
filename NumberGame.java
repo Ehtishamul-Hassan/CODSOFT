@@ -11,11 +11,15 @@ public class NumberGame {
         int maxRange = 100;
         int maxGuesses = 5;
         int roundWon = 0;
+        
 
         Random random = new Random();
         boolean playAgain = true;
 
-        System.out.println("Welcome to the Number Game");
+        System.out.println("**********************************");
+        System.out.println("    Welcome to the Number Game");
+        System.out.println("**********************************");
+        System.out.println();
         System.out.println("You have " + maxGuesses + " guesses to crack the game");
 
         while (playAgain) {
@@ -25,12 +29,14 @@ public class NumberGame {
             int guess = 0;
             int guessCounter = 0;
 
-            while (guess != randomNum && guessCounter <= maxGuesses) {
+            while (guess != randomNum && guessCounter < maxGuesses) {
+                int guessLeft = maxGuesses - guessCounter;
 
                 // prompt from user
-                System.out.println("Enter your Guess");
+                System.out.println("Enter your Guess (Guesses Left : " + guessLeft + ")");
                 guess = sc.nextInt();
                 guessCounter++;
+                
 
                 if (guess == randomNum) {
                     userGuess = "Correct";
